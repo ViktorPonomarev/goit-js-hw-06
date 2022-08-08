@@ -19,5 +19,19 @@ Elements: 3
 Category: Technologies
 Elements: 5 */
 
-const headerEl = document.querySelectorAll(".item");
+const headerEl = document.querySelector(".item");
 console.log("headerEl", headerEl);
+console.log(headerEl.textContent);
+
+const firstHeaderEl = headerEl.firstElementChild;
+console.log(firstHeaderEl);
+console.log(headerEl.children);
+console.log(headerEl.lastElementChild);
+
+console.log(headerEl.nextElementSibling);
+console.log(headerEl.nextSibling);
+console.log(headerEl.previousElementSibling);
+console.log(headerEl.previousSibling);
+console.log(headerEl.firstElementChild);
+console.log(headerEl.parentNode);
+console.log(headerEl.childNodes);
