@@ -19,19 +19,29 @@ Elements: 3
 Category: Technologies
 Elements: 5 */
 
-const headerEl = document.querySelector(".item");
+const headerEl = document.querySelectorAll(".item");
 console.log("headerEl", headerEl);
-console.log(headerEl.textContent);
+console.log("Number of categories:", headerEl.length);
 
-const firstHeaderEl = headerEl.firstElementChild;
-console.log(firstHeaderEl);
-console.log(headerEl.children);
-console.log(headerEl.lastElementChild);
 
-console.log(headerEl.nextElementSibling);
-console.log(headerEl.nextSibling);
-console.log(headerEl.previousElementSibling);
-console.log(headerEl.previousSibling);
-console.log(headerEl.firstElementChild);
-console.log(headerEl.parentNode);
-console.log(headerEl.childNodes);
+headerEl.forEach(element => {
+    console.log("Category:", element.firstElementChild.textContent);
+    console.log("Elements:", element.lastElementChild.children.length);
+    
+});
+
+
+// console.log(headerEl.textContent);
+
+// const firstHeaderEl = headerEl.firstElementChild;
+// console.log(firstHeaderEl);
+// console.log(headerEl.children);
+// console.log(headerEl.lastElementChild);
+
+// console.log(headerEl.nextElementSibling);
+// console.log(headerEl.nextSibling);
+// console.log(headerEl.previousElementSibling);
+// console.log(headerEl.previousSibling);
+// console.log(headerEl.firstElementChild);
+// console.log(headerEl.parentNode);
+// console.log(headerEl.childNodes);
