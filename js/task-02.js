@@ -39,29 +39,29 @@ const ingredientsEl = document.querySelector("ul");
 // console.log(elements);
 // ingredientsEl.append(...elements);
 
-// ! Vol- 2
-const elements = ingredients.map(option => {
+// // ! Vol- 2
+// const elements = ingredients.map(option => {
 
-  const titleEl = document.createElement("li");
-titleEl.classList.add("item");
-  titleEl.textContent = option;
-
-  return titleEl;
-});
-
-console.log(elements);
-ingredientsEl.append(...elements);
-
-// // ! Vol- 3 Пишем функция для создания АйтемОптионс
-// const makeItemOptions = options => { 
-//   return options.map(option => {
-//  const titleEl = document.createElement("li");
+//   const titleEl = document.createElement("li");
 // titleEl.classList.add("item");
 //   titleEl.textContent = option;
 
 //   return titleEl;
-//   });
-// };
-// const elements = makeItemOptions(itemOptions);
-// itemOptions.append(...elements);
+// });
+
+// console.log(elements);
+// ingredientsEl.append(...elements);
+
+// ! Vol- 3 Пишем функция для создания АйтемОптионс
+const makeIngredients = options => { 
+  return options.map(option => {
+ const titleEl = document.createElement("li");
+titleEl.classList.add("item");
+  titleEl.textContent = option;
+
+  return titleEl;
+  });
+};
+const elements = makeIngredients(ingredients);
+ingredientsEl.append(...elements);
 
