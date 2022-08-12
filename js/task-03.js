@@ -26,3 +26,32 @@ insertAdjacentHTML().
 Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 Добавь минимальное оформление галереи флексбоксами или гридами через CSS 
 классы. */
+
+// ! Сразу решение
+// const imgEl = document.querySelector(".images");
+// const img = [...images];
+
+// for (let el of images)
+//   document
+//     .querySelector(".gallery")
+//     .insertAdjacentHTML(
+//       "beforeEnd",
+//       `<li><img src="${el.url}" alt="${el.alt}"></li>`
+//   );
+
+// console.log(img);
+
+// ! Верное решение
+const galleryEl = document.querySelector('.gallery');
+console.log(galleryEl);
+
+const listGallery = item => {
+  return `<li>
+    <img src="${item.url}" alt="${item.alt}"/>
+  </li>`;
+
+};
+
+const markup = images.map(listGallery).join('');
+console.log(markup);
+galleryEl.insertAdjacentHTML('beforeend', markup);
