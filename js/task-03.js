@@ -11,6 +11,7 @@ const images = [
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400',
     alt: 'Group of Horses Running',
   },
+  
 ];
 
 /*Задача 3
@@ -57,7 +58,10 @@ galleryEl.style.cssText = `
 display: flex; 
 flex-wrap: wrap; 
 align-items: center;
-justify-content:space-between;`
+justify-content:space-between;
+background-color: bisque;
+ 
+list-style:none;`
 
 const markup = images.map(listGallery).join('');
 console.log(markup);
