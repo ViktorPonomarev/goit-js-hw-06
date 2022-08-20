@@ -49,7 +49,7 @@ console.log(galleryEl);
 
 const listGallery = item => {
   return `<li>
-    <img src="${item.url}" alt="${item.alt}"/>
+    <img src="${item.url}" alt="${item.alt}"width='500'/>
   </li>`;
 
 };
