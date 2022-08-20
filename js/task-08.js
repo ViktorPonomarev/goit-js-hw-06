@@ -33,26 +33,23 @@
 
 const form = document.querySelector('.login-form');
 
-form.addEventListener('sabmit', onFormSubmit);
+form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
     event.preventDefault();
 
     const formElements = event.currentTarget.elements;
-    console.dir(formElements);
+    // console.dir(formElements);
 
-    const email = formElements.email.value;
-    const password = formElements.password.value;
-    const submit = formElements.submit.value;
-
-    const formData = {
-
-        email,
-        password,
-        submit,
-    };
-   
-    console.log(formData);
+    const email = formElements.email;
+    const password = formElements.password;
+    
+    if (email.value === "" || password.value === "") {
+       return alert('Заполни форму!');
+}
+    // console.log(email);
+    // console.log(password);
+    console.log({ email: email.value, password: password.value });
 }
 
 
