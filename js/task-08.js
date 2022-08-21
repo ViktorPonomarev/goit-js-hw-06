@@ -42,14 +42,19 @@ function onFormSubmit(event) {
     // console.dir(formElements);
 
     const email = formElements.email;
-    const password = formElements.password;
+  const password = formElements.password;
+  
     
-    if (email.value === "" || password.value === "") {
-       return alert('Заполни форму!');
-}
+  if (email.value === "" || password.value === "") {
+      
+      return alert('Заполни форму!');
+      
+    }
+
     // console.log(email);
     // console.log(password);
-    console.log({ email: email.value, password: password.value });
+  console.log({ email: email.value, password: password.value });
+  form.reset();
 }
 
 
